@@ -29,9 +29,6 @@ export const GameInfo = ({ name, rating, platforms, genres }: GameInfoProps) => 
           <PlusIcon className='w-4 lg:w-6' />
         </div>
       </div>
-      <div className='flex h-6 w-6 cursor-pointer items-center justify-center rounded-full bg-transparent transition hover:bg-neutral-300 hover:text-black lg:h-10 lg:w-10'>
-        <ChevronDownIcon className='w-4 lg:w-6' />
-      </div>
     </div>
 
     <div className='mt-4 text-sm font-bold text-white lg:text-lg'>
