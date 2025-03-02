@@ -7,6 +7,7 @@ import { GameCard } from "./components/gamecard/GameCard";
 import { useEffect, useState } from "react";
 import { fetchGames } from "./services/rawgApi";
 import ParallaxBanner from "./components/ParallaxBanner";
+import Footer from "./components/Footer";
 
 export default function Home() {
 
@@ -25,15 +26,15 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative bg-gradient-to-b pb-8">      
+    <div className="relative bg-gradient-to-b min-h-screen flex flex-col">      
       <Header />       
-      <div className="relative p-8 pb-20 w-full h-[100vh] lg:px-16">
+      <div className="relative p-8 pb-20 w-full lg:px-16">
         <Banner />
       </div>
 
       <ParallaxBanner />
       
-      <main className="relative z-10 p-8 pb-20 scrollbar-hide lg:px-16">
+      <main className="relative z-10 p-8 pb-20 scrollbar-hide lg:px-16 flex-grow">
         <div className='flex-col space-y-2'>
           <div className='flex'>
           </div>
@@ -54,7 +55,9 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
+    
 
   );
 }
