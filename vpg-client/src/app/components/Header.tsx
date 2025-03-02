@@ -10,7 +10,7 @@ export default function Header() {
             <div className='flex items-center space-x-2 md:space-x-8'>
                 <nav>
                     <ul className="hidden cursor-pointer md:flex md:space-x-4 hover:underline-offset-1">
-                        <li>Sobre</li>
+                        <li>About</li>
                         <li>Ranking</li>
                     </ul>
                 </nav>
