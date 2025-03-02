@@ -2,46 +2,70 @@ import Image from "next/image";
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
 import { PlayIcon } from '@heroicons/react/24/solid';
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { getBanners } from "../services/bannerApi"; 
 
-export function Banner() {
+interface BannerData {
+    id: number;
+    image: string;
+    title: string;
+    description: string;
+    trailer: string;
+    info: string;
+}
+
+export function Banner({ bannerId }: { bannerId: number }) {
+    const [banner, setBanner] = useState<BannerData | null>(null);
+
+    useEffect(() => {
+        const fetchBanner = async () => {
+          try {
+            const data: BannerData[] = await getBanners();
+            const selectedBanner = data.find((b) => b.id === bannerId);
+            setBanner(selectedBanner || null);
+          } catch (error) {
+            console.error("Erro ao buscar o banner:", error);
+          }
+        };
+
+    fetchBanner();
+  }, [bannerId]);
+
+  if (!banner) return <p>Carregando...</p>;
+  
     return (
         <div className="mb-10 lg:mb-20">
             <div className="flex flex-col space-y-4 py-16 md:space-y-4 lg:h-[76vh] lg:justify-end lg:pb-12">
-                <div className="absolute left-0 top-0 -z-10 flex h-full w-full flex-col bg-[black] overflow-hidden">
+                <div className="absolute left-0 top-0 -z-10 flex h-[100vh] w-full flex-col bg-[black] overflow-hidden">
 
                     <Image
-                        src="/GTAVI_banner.webp"
-                        alt="GTA VI"
+                        src={banner.image} 
+                        alt={banner.title}
                         fill={true} 
                         className="opacity-50 object-cover"
                     />
                         
                 </div>       
                 <h1 className="text-2xl font-bold md:text-4xl lg:text-7xl">
-                    GTA VI
+                    {banner.title}
                 </h1>
         
                 <p className="text-shadow-md max-w-xs text-xs md:max-w-lg md:text-lg lg:max-w-2xl">
-                    Grand Theft Auto VI is an upcoming video game in development by 
-                    Rockstar Games. It is due to be the eighth main Grand Theft Auto game, 
-                    following Grand Theft Auto V (2013), and the sixteenth entry overall. 
-                    Set within the fictional open world state of Leonida—based on Florida—and its 
-                    Miami-inspired Vice City, the story is expected to follow the criminal duo of 
-                    Lucia and her male partner.
+                    {banner.description}
                 </p>
 
             </div>
 
             <div className="flex space-x-3">
                 <Link
-                    href={`https://www.youtube.com/watch?v=QdBZY2fkU-0`}
+                    href={banner.trailer}
                     target="_blank"
                     className='flex cursor-pointer items-center gap-x-2 rounded bg-white px-5 py-1.5 text-sm font-semibold text-black transition hover:opacity-75 md:px-8 md:py-2.5'>
                     <PlayIcon className='h-6' />
                     Trailer
                 </Link>
                 <Link
-                    href={`https://www.rockstargames.com/br/VI`}
+                    href={banner.info}
                     target="_blank">
                     <button className='flex cursor-pointer items-center gap-x-2 rounded bg-gray-500 px-5 py-1.5 text-sm font-semibold text-black transition hover:opacity-75 md:px-8 md:py-2.5'>
                         <InformationCircleIcon className='h-6' />

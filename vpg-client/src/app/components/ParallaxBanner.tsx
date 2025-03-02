@@ -1,7 +1,7 @@
 const ParallaxBanner = () => {
     return (
       <div
-        className="relative z-0 h-[40vh] bg-fixed bg-center bg-cover flex flex-col items-center justify-center text-center"
+        className="relative z-0 h-[60vh] bg-fixed bg-center bg-cover flex flex-col items-center justify-center text-center"
         style={{
           backgroundImage: "url('https://www.techspot.com/images2/news/bigimage/2022/04/2022-04-14-image-15.jpg')", 
         }}

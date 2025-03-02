@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 export default function Home() {
 
   const [games, setGames] = useState([]);
+  const bannerId = 3;
 
   useEffect(() => {
     const getGames = async () => {
@@ -28,8 +29,8 @@ export default function Home() {
   return (
     <div className="relative bg-gradient-to-b min-h-screen flex flex-col">      
       <Header />       
-      <div className="relative p-8 pb-20 w-full lg:px-16">
-        <Banner />
+      <div className="relative p-8 pb-0.5 w-full lg:px-16">
+        <Banner bannerId={bannerId} />
       </div>
 
       <ParallaxBanner />
@@ -61,3 +62,4 @@ export default function Home() {
 
   );
 }
+
