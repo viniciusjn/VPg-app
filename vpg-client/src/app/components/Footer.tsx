@@ -7,10 +7,10 @@ export default function Footer() {
         <h2 className="text-2xl font-bold tracking-wider">VPg</h2>
 
         <nav className="flex space-x-6 text-sm font-medium">
-          <a href="/" className="hover:text-gray-400 transition">Início</a>
-          <a href="#" className="hover:text-gray-400 transition">Sobre</a>
+          <a href="/" className="hover:text-gray-400 transition">Home</a>
+          <a href="#" className="hover:text-gray-400 transition">About</a>
           <a href="#" className="hover:text-gray-400 transition">Ranking</a>
-          <a href="#" className="hover:text-gray-400 transition">Contato</a>
+          <a href="#" className="hover:text-gray-400 transition">Contact</a>
         </nav>
 
         <div className="flex space-x-4">
@@ -28,7 +28,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <p className="text-xs text-gray-400">© {new Date().getFullYear()} VPg. Todos os direitos reservados.</p>
+        <p className="text-xs text-gray-400">© {new Date().getFullYear()} VPg. All rights reserved.</p>
       </div>
     </footer>
   );
