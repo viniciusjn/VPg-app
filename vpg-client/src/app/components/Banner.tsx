@@ -34,7 +34,7 @@ export function Banner({ bannerId }: { bannerId: number }) {
   if (!banner) return <p>Carregando...</p>;
   
     return (
-        <div className="mb-10 lg:mb-20">
+        <div className="mb-10 lg:mb-17">
             <div className="flex flex-col space-y-4 py-16 md:space-y-4 lg:h-[76vh] lg:justify-end lg:pb-12">
                 <div className="absolute left-0 top-0 -z-10 flex h-[100vh] w-full flex-col bg-[black] overflow-hidden">
 
