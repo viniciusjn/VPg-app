@@ -10,8 +10,8 @@ export default function Header() {
             <div className='flex items-center space-x-2 md:space-x-8'>
                 <nav>
                     <ul className="hidden md:flex md:space-x-6 hover:underline-offset-1">
-                        <li className="cursor-pointer p-1 hover:bg-[#4b305e]">About</li>
-                        <li className="cursor-pointer p-1 hover:bg-[#4b305e]">Ranking</li>
+                        <a href="/ranking"><li className="cursor-pointer p-1 hover:bg-[#4b305e]">About</li></a>
+                        <a href="/ranking"><li className="cursor-pointer p-1 hover:bg-[#4b305e]">Ranking</li></a>
                     </ul>
                 </nav>
             </div>

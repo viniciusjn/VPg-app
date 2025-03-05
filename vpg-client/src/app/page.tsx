@@ -12,7 +12,7 @@ import Footer from "./components/Footer";
 export default function Home() {
 
   const [games, setGames] = useState([]);
-  const bannerId = 1;
+  const bannerId = 3;
 
   useEffect(() => {
     const getGames = async () => {

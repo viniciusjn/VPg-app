@@ -22,6 +22,8 @@ export function Banner({ bannerId }: { bannerId: number }) {
           try {
             const data: BannerData[] = await getBanners();
             const selectedBanner = data.find((b) => b.id === bannerId);
+            console.log("Banner selecionado:", selectedBanner);
+            console.log("Dados da API interna:", data);
             setBanner(selectedBanner || null);
           } catch (error) {
             console.error("Erro ao buscar o banner:", error);
@@ -31,7 +33,10 @@ export function Banner({ bannerId }: { bannerId: number }) {
     fetchBanner();
   }, [bannerId]);
 
-  if (!banner) return <p>Carregando...</p>;
+  if (!banner) {
+    console.error("Banner está indefinido!");
+    return <p>Carregando...</p>;
+}
   
     return (
         <div className="mb-10 lg:mb-17">
