@@ -33,7 +33,10 @@ export default function Home() {
         <Banner bannerId={bannerId} />
       </div>
 
-      <ParallaxBanner />
+      <ParallaxBanner 
+        title="LIVE THE GAMES INTENSELY!" 
+        subtitle="Your adventure begins here." 
+      />
       
       <main className="relative z-10 p-8 pb-20 scrollbar-hide lg:px-16 flex-grow">
         <div className='flex-col space-y-2'>

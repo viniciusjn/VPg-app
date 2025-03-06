@@ -34,7 +34,10 @@ const RankingPage = () => {
   return (
     <div className="relative bg-gradient-to-b min-h-screen flex flex-col bg-[#171717]">
         <Header />
-        <ParallaxBanner />
+        <ParallaxBanner 
+            title="TOP RANKED GAMES!" 
+            subtitle="The most acclaimed titles, all in one place." 
+        />
         <RankingTable />
         <Footer />
     </div>
