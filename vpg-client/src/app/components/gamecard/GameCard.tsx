@@ -10,7 +10,7 @@ interface GameCardProps {
   genres: { name: string }[];
 }
 
-export const GameCard = ({ id, name, background_image, rating, platforms, genres }: GameCardProps) => (
+export const GameCard = ({ name, background_image, rating, platforms, genres }: GameCardProps) => (
   <div className='group relative min-h-[12vh] rounded bg-zinc-900 md:min-h-[12vw] '>
     <div className='relative'>
       <Image
