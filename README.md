@@ -67,7 +67,7 @@ Ao abrir o projeto no VS Code ou em qualquer IDE que utilize, no diretório vpg-
 .env.local
 ```
 
-Depois de criá-lo, cole o código abaixo e [SUBSTITUA] os asteriscos pela chave da API que você conseguiu logo após criar a conta na [RAWG API](https://rawg.io/apidocs):
+Depois de criá-lo, cole o código abaixo no arquivo .env.local e SUBSTITUA os asteriscos pela chave da API que você conseguiu logo após criar a conta na [RAWG](https://rawg.io/apidocs):
 
 ```
 NEXT_PUBLIC_RAWG_API_KEY=***********************************
