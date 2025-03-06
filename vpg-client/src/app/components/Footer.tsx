@@ -9,8 +9,7 @@ export default function Footer() {
         <nav className="flex space-x-6 text-sm font-medium">
           <a href="/" className="hover:text-gray-400 transition">Home</a>
           <a href="#" className="hover:text-gray-400 transition">About</a>
-          <a href="#" className="hover:text-gray-400 transition">Ranking</a>
-          <a href="#" className="hover:text-gray-400 transition">Contact</a>
+          <a href="/ranking" className="hover:text-gray-400 transition">Ranking</a>
         </nav>
 
         <div className="flex space-x-4">
