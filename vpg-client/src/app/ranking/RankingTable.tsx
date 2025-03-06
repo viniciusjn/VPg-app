@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { fetchGames } from "../services/rawgApi";
+import RankingRow from "./RankingRow";
 
 interface Game {
   id: number;
@@ -40,46 +40,40 @@ const RankingTable = () => {
   });
 
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold mb-4">Ranking de Jogos</h1>
-      <table className="min-w-full bg-gray-800 text-white border border-gray-700">
-        <thead>
-          <tr>
-            <th className="p-3 border border-gray-700">#</th>
-            <th
-              className="p-3 border border-gray-700 cursor-pointer"
-              onClick={() => handleSort("name")}
-            >
-              Nome {sortBy === "name" ? (sortOrder === "asc" ? "↑" : "↓") : ""}
-            </th>
-            <th className="p-3 border border-gray-700">Banner</th>
-            <th
-              className="p-3 border border-gray-700 cursor-pointer"
-              onClick={() => handleSort("rating")}
-            >
-              Nota {sortBy === "rating" ? (sortOrder === "asc" ? "↑" : "↓") : ""}
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {sortedGames.map((game, index) => (
-            <tr key={game.id} className="border border-gray-700">
-              <td className="p-3 text-center">{index + 1}</td>
-              <td className="p-3">{game.name}</td>
-              <td className="p-3 flex justify-center">
-                <Image
-                  src={game.background_image}
-                  alt={game.name}
-                  width={50}
-                  height={30}
-                  className="rounded"
-                />
-              </td>
-              <td className="p-3 text-center">{game.rating.toFixed(1)}</td>
+    <div className="p-8 bg-gradient-to-b from-gray-900 to-black min-h-screen">
+      <div className="overflow-hidden rounded-lg shadow-lg">
+        <table className="min-w-full bg-gray-800 text-white border border-gray-700">
+          <thead className="bg-purple-700 text-white uppercase">
+            <tr>
+              <th className="p-4 text-center">#</th>
+              <th
+                className="p-4 cursor-pointer hover:bg-purple-600 transition"
+                onClick={() => handleSort("name")}
+              >
+                Nome {sortBy === "name" ? (sortOrder === "asc" ? "↑" : "↓") : ""}
+              </th>
+              <th className="p-4 text-center">Banner</th>
+              <th
+                className="p-4 cursor-pointer hover:bg-purple-600 transition"
+                onClick={() => handleSort("rating")}
+              >
+                Nota {sortBy === "rating" ? (sortOrder === "asc" ? "↑" : "↓") : ""}
+              </th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {sortedGames.map((game, index) => (
+              <RankingRow
+                key={game.id}
+                index={index}
+                name={game.name}
+                rating={game.rating}
+                backgroundImage={game.background_image}
+              />
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
