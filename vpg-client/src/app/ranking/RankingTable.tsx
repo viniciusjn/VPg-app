@@ -50,14 +50,14 @@ const RankingTable = () => {
                 className="p-4 cursor-pointer hover:bg-purple-600 transition"
                 onClick={() => handleSort("name")}
               >
-                Nome {sortBy === "name" ? (sortOrder === "asc" ? "↑" : "↓") : ""}
+                NAME {sortBy === "name" ? (sortOrder === "asc" ? "↑" : "↓") : ""}
               </th>
-              <th className="p-4 text-center">Banner</th>
+              <th className="p-4 text-center">GAME</th>
               <th
                 className="p-4 cursor-pointer hover:bg-purple-600 transition"
                 onClick={() => handleSort("rating")}
               >
-                Nota {sortBy === "rating" ? (sortOrder === "asc" ? "↑" : "↓") : ""}
+                RATING {sortBy === "rating" ? (sortOrder === "asc" ? "↑" : "↓") : ""}
               </th>
             </tr>
           </thead>
