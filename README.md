@@ -9,6 +9,7 @@ O objetivo principal desse projeto é a implementação de uma interface respons
 - site todo feito com TypeScript, React, Next.js, Tailwind CSS;
 - é consumida a [RAWG API](https://api.rawg.io/docs/) para trazer informações da temática abordada;
 - é utilizado o JSON server para consumir uma API interna que facilita a variação de um componente;
+- na página de ranking é criada uma tabela que também consome os dados [RAWG API](https://api.rawg.io/docs/), essa tabela conta com ordenação crescente e decrescente pela nota e ordem alfabética pelo nome do jogo
 - a temática adotada foi de um site voltado para informações sobre games, seus rankings e detalhes;
 - o nome "VPg" significa Vinícius Pereira (meu nome) games
 
@@ -25,6 +26,8 @@ O objetivo principal desse projeto é a implementação de uma interface respons
 ## 🚀 Rodando o projeto
 
 ### -> pré-requisitos
+
+Primeiramente você deverá criar uma conta na [RAWG API](https://rawg.io/apidocs) para que consiga obter a chave de utlização da API, é um processo super rápido e tranquilo.
 
 É necessário possuir o [Node.js](https://nodejs.org/en) instalado na sua máquina, para verificar se já o possui, abra o terminal e digite:
 
@@ -58,15 +61,28 @@ Instalar todas as depedências:
 npm install
 ```
 
+Ao abrir o projeto no VS Code ou em qualquer IDE que utilize, no diretório vpg-client você deve criar um arquivo chamado:
+
+```
+.env.local
+```
+
+Depois de criá-lo, cole o código abaixo e [SUBSTITUA] os asteriscos pela chave da API que você conseguiu logo após criar a conta na [RAWG API](https://rawg.io/apidocs):
+
+```
+NEXT_PUBLIC_RAWG_API_KEY=***********************************
+```
+
+
 ### -> rodando:
 
-Antes de rodar o projeto, ainda no repositório "vpg-client", você deverá inicializar o JSON server através do comando:
+Antes de rodar o projeto, ainda no repositório "vpg-client", você deverá inicializar o JSON server através do comando no terminal:
 
 ```
 json-server --watch db.json --port 3001
 ```
 
-E por fim colocar o projeto funcionando em servidor local:
+E por fim, no mesmo diretório vpg-client, colocar o projeto funcionando em servidor local:
 
 ```
 npm run dev
