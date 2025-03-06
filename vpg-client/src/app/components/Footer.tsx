@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
@@ -7,24 +8,24 @@ export default function Footer() {
         <h2 className="text-2xl font-bold tracking-wider">VPg</h2>
 
         <nav className="flex space-x-6 text-sm font-medium">
-          <a href="/" className="hover:text-purple-700 transition">Home</a>
-          <a href="#" className="hover:text-purple-700 transition">About</a>
-          <a href="/ranking" className="hover:text-purple-700 transition">Ranking</a>
+          <Link href="/" className="hover:text-purple-700 transition">Home</Link>
+          <Link href="#" className="hover:text-purple-700 transition">About</Link>
+          <Link href="/ranking" className="hover:text-purple-700 transition">Ranking</Link>
         </nav>
 
         <div className="flex space-x-4">
-          <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-purple-700 transition">
+          <Link href="#" className="p-2 bg-gray-800 rounded-full hover:bg-purple-700 transition">
             <FaFacebookF className="w-5 h-5" />
-          </a>
-          <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-purple-700 transition">
+          </Link>
+          <Link href="#" className="p-2 bg-gray-800 rounded-full hover:bg-purple-700 transition">
             <FaTwitter className="w-5 h-5" />
-          </a>
-          <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-purple-700 transition">
+          </Link>
+          <Link href="#" className="p-2 bg-gray-800 rounded-full hover:bg-purple-700 transition">
             <FaInstagram className="w-5 h-5" />
-          </a>
-          <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-purple-700 transition">
+            </Link>
+          <Link href="#" className="p-2 bg-gray-800 rounded-full hover:bg-purple-700 transition">
             <FaLinkedinIn className="w-5 h-5" />
-          </a>
+          </Link>
         </div>
 
         <p className="text-xs text-gray-400">© {new Date().getFullYear()} VPg. All rights reserved.</p>
