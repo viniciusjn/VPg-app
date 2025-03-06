@@ -7,22 +7,22 @@ export default function Footer() {
         <h2 className="text-2xl font-bold tracking-wider">VPg</h2>
 
         <nav className="flex space-x-6 text-sm font-medium">
-          <a href="/" className="hover:text-gray-400 transition">Home</a>
-          <a href="#" className="hover:text-gray-400 transition">About</a>
-          <a href="/ranking" className="hover:text-gray-400 transition">Ranking</a>
+          <a href="/" className="hover:text-purple-700 transition">Home</a>
+          <a href="#" className="hover:text-purple-700 transition">About</a>
+          <a href="/ranking" className="hover:text-purple-700 transition">Ranking</a>
         </nav>
 
         <div className="flex space-x-4">
-          <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition">
+          <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-purple-700 transition">
             <FaFacebookF className="w-5 h-5" />
           </a>
-          <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition">
+          <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-purple-700 transition">
             <FaTwitter className="w-5 h-5" />
           </a>
-          <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition">
+          <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-purple-700 transition">
             <FaInstagram className="w-5 h-5" />
           </a>
-          <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition">
+          <a href="#" className="p-2 bg-gray-800 rounded-full hover:bg-purple-700 transition">
             <FaLinkedinIn className="w-5 h-5" />
           </a>
         </div>
