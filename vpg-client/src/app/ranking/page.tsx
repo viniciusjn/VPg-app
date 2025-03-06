@@ -16,7 +16,7 @@ export interface Game {
 }
 
 const RankingPage = () => {
-  const [games, setGames] = useState<Game[]>([]);
+  const [, setGames] = useState<Game[]>([]);
 
   useEffect(() => {
     const getGames = async () => {
