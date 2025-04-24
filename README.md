@@ -9,9 +9,9 @@ O objetivo principal desse projeto é a implementação de uma interface respons
 - site todo feito com TypeScript, React, Next.js, Tailwind CSS;
 - é consumida a [RAWG API](https://api.rawg.io/docs/) para trazer informações da temática abordada;
 - é utilizado o JSON server para consumir uma API interna que facilita a variação de um componente;
-- na página de ranking é criada uma tabela que também consome os dados [RAWG API](https://api.rawg.io/docs/), essa tabela conta com ordenação crescente e decrescente pela nota e ordem alfabética pelo nome do jogo
+- na página de ranking é criada uma tabela que também consome os dados [RAWG API](https://api.rawg.io/docs/), essa tabela conta com ordenação crescente e decrescente pela nota e ordem alfabética pelo nome do jogo;
 - a temática adotada foi de um site voltado para informações sobre games, seus rankings e detalhes;
-- o nome "VPg" significa Vinícius Pereira (meu nome) games
+- o nome "VPg" significa Vinícius Pereira (meu nome) games;
 
 ## Ferramentas e Tecnologias
 
