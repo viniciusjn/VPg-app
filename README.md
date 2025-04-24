@@ -1,7 +1,7 @@
 # VPg
 
 ## Objetivo
-O objetivo principal desse projeto é a implementação de uma interface responsiva, moderna, funcional e estilizada usando as principais ferramentas do Tailwind CSS, React e Next.js. São abordados conceitos de componentização, módulos e rotas do Next.js/React, estilização através do Tailwind com o máximo de suas funcionalidades, além do consumo de uma API interna através do JSON server e uma API externa para buscar dados da temática escolhida.
+O objetivo principal desse projeto é a implementação de uma interface responsiva, moderna, funcional e estilizada usando as principais ferramentas do Next.js com Tailwind CSS. São abordados conceitos de componentização, módulos e rotas do Next.js, estilização através do Tailwind com o máximo de suas funcionalidades, além do consumo de uma API interna através do JSON server e uma API externa para buscar dados da temática escolhida.
 
 ## Especificações
 - projeto totalmente focado no front-end;
